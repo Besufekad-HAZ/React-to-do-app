@@ -1,4 +1,6 @@
-const Todo = ({ text, todo, todos, setTodos }) => {
+function Todo({
+  text, todo, todos, setTodos,
+}) {
   const deleteHandler = () => {
     setTodos(todos.filter((el) => el.id !== todo.id));
   };
@@ -13,23 +15,23 @@ const Todo = ({ text, todo, todos, setTodos }) => {
           };
         }
         return item;
-      })
+      }),
     );
   };
 
   return (
     <div className="todo">
       <button onClick={completeHandler} className="complete-btn">
-        <i className="fas fa-check"></i>
+        <i className="fas fa-check" />
       </button>
-      <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
+      <li className={`todo-item ${todo.completed ? 'completed' : ''}`}>
         {text}
       </li>
       <button onClick={deleteHandler} className="trash-btn">
-        <i className="fas fa-trash"></i>
+        <i className="fas fa-trash" />
       </button>
     </div>
   );
-};
+}
 
 export default Todo;

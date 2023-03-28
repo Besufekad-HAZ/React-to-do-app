@@ -1,12 +1,11 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import "./App.css";
-import { useState, useEffect } from "react";
-import Form from "./components/Form";
-import TodoList from "./components/TodoList";
+import './App.css';
+import { useState, useEffect } from 'react';
+import Form from './components/Form';
+import TodoList from './components/TodoList';
 
 function App() {
-  const [inputText, setInputText] = useState("");
-  const [status, setStatus] = useState("All");
+  const [inputText, setInputText] = useState('');
+  const [status, setStatus] = useState('All');
   const [filterTD, setFilterTD] = useState([]);
   let [todos, setTodos] = useState([]);
 
@@ -18,7 +17,7 @@ function App() {
     //   const todoLocal = JSON.parse(localStorage.getItem("todos"));
     //   setTodos(todoLocal);
     // }
-    const temp = localStorage.getItem("todos");
+    const temp = localStorage.getItem('todos');
     const savedTodos = JSON.parse(temp);
     return savedTodos || [];
   };
@@ -34,19 +33,12 @@ function App() {
   //   saveToLocalS();
   // }, [todos, status]);
 
-  useEffect(() => {
-    // storing todos items
-    filterHandler();
-    const temp = JSON.stringify(todos);
-    localStorage.setItem("todos", temp);
-  }, [todos, status]);
-
   const filterHandler = () => {
     switch (status) {
-      case "completed":
+      case 'completed':
         setFilterTD(todos.filter((todo) => todo.completed === true));
         break;
-      case "uncompleted":
+      case 'uncompleted':
         setFilterTD(todos.filter((todo) => todo.completed === false));
         break;
       default:
@@ -54,6 +46,14 @@ function App() {
         break;
     }
   };
+
+  useEffect(() => {
+    // storing todos items
+    filterHandler();
+    const temp = JSON.stringify(todos);
+    localStorage.setItem('todos', temp);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [todos, status]);
 
   // Saving to local storage
   // const saveToLocalS = () => {

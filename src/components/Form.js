@@ -1,4 +1,6 @@
-const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
+function Form({
+  inputText, setInputText, todos, setTodos, setStatus,
+}) {
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
   };
@@ -13,7 +15,7 @@ const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
         id: Math.round(Math.random() * 100),
       },
     ]);
-    setInputText("");
+    setInputText('');
   };
 
   const statusHandler = (e) => {
@@ -30,7 +32,7 @@ const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
         placeholder="Add todo..."
       />
       <button onClick={submitTodoHandler} className="todo-button" type="submit">
-        <i className="fas fa-plus-square"></i>
+        <i className="fas fa-plus-square" />
       </button>
       <div className="select">
         <select onChange={statusHandler} name="todos" className="filter-todo">
@@ -41,6 +43,6 @@ const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
       </div>
     </form>
   );
-};
+}
 
 export default Form;

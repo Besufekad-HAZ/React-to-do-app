@@ -5,12 +5,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-image: linear-gradient(120deg, #3be3ef 0%, #013979 100%);
   color: white;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
 }
+
 header {
   font-size: 2rem;
 }
@@ -22,6 +24,7 @@ form {
   justify-content: center;
   align-items: center;
 }
+
 form input,
 form button {
   padding: 0.5rem;
@@ -29,16 +32,19 @@ form button {
   border: none;
   background: white;
 }
+
 form button {
   color: #004351;
   background: #f7fffe;
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 form button:hover {
   background: #003533;
   color: white;
 }
+
 .todo-container {
   display: flex;
   justify-content: center;
@@ -61,9 +67,11 @@ form button:hover {
   border-radius: 1rem;
   transition: all 1s ease;
 }
+
 .filter-todo {
   padding: 1rem;
 }
+
 .todo li {
   flex: 1;
 }
@@ -77,11 +85,13 @@ form button:hover {
   cursor: pointer;
   font-size: 1rem;
 }
+
 .complete-btn {
   background: rgb(11, 212, 162);
 }
+
 .todo-item {
-  padding: 0rem 0.5rem;
+  padding: 0 0.5rem;
 }
 
 .fa-trash,
@@ -99,7 +109,7 @@ form button:hover {
   opacity: 0.5;
 }
 
-/*CUSTOM SELECTOR */
+/* CUSTOM SELECTOR */
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -109,20 +119,15 @@ select {
   box-shadow: none;
   border: 0 !important;
   background-image: none;
-}
-
-/* Custom Select */
-.select {
-  margin: 1rem;
-  position: relative;
-  overflow: hidden;
-}
-select {
   color: #00303c;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   width: 12rem;
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
 }
+
 /* Arrow */
 .select::after {
   content: "\25BC";

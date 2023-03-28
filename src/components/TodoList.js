@@ -1,6 +1,6 @@
-import Todo from "./todo-add";
+import Todo from './todo-add';
 
-const TodoList = ({ todos, setTodos,filterTD }) => {
+function TodoList({ todos, setTodos, filterTD }) {
   return (
     <div className="todo-container">
       <ul className="todo-list">
@@ -16,6 +16,6 @@ const TodoList = ({ todos, setTodos,filterTD }) => {
       </ul>
     </div>
   );
-};
+}
 
 export default TodoList;
