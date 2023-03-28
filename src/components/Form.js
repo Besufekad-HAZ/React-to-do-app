@@ -1,6 +1,4 @@
-function Form({
-  inputText, setInputText, todos, setTodos, setStatus,
-}) {
+function Form({ inputText, setInputText, todos, setTodos, setStatus }) {
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
   };
@@ -15,7 +13,7 @@ function Form({
         id: Math.round(Math.random() * 100),
       },
     ]);
-    setInputText('');
+    setInputText("");
   };
 
   const statusHandler = (e) => {
@@ -44,5 +42,12 @@ function Form({
     </form>
   );
 }
+Form.propTypes = {
+  inputText: PropTypes.string.isRequired,
+  setInputText: PropTypes.func.isRequired,
+  todos: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setTodos: PropTypes.func.isRequired,
+  setStatus: PropTypes.func.isRequired,
+};
 
 export default Form;
