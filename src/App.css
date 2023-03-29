@@ -110,24 +110,17 @@ form button:hover {
 }
 
 /* CUSTOM SELECTOR */
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  outline: 0;
-  box-shadow: none;
-  border: 0 !important;
-  background-image: none;
-  color: #00303c;
-  font-family: "Poppins", sans-serif;
-  cursor: pointer;
-  width: 12rem;
+.select {
   margin: 1rem;
   position: relative;
   overflow: hidden;
 }
-
+select {
+  color: #00345b;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 12rem;
+}
 /* Arrow */
 .select::after {
   content: "\25BC";
@@ -135,7 +128,7 @@ select {
   top: 0;
   right: 0;
   padding: 1rem;
-  background: #183643;
+  background: #00262c;
   cursor: pointer;
   pointer-events: none;
 }

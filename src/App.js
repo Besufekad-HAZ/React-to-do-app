@@ -2,7 +2,6 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import Form from './components/Form';
 import TodoList from './components/TodoList';
-import PropTypes from "prop-types";
 
 function App() {
   const [inputText, setInputText] = useState('');
