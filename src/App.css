@@ -115,12 +115,14 @@ form button:hover {
   position: relative;
   overflow: hidden;
 }
+
 select {
   color: #00345b;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   width: 12rem;
 }
+
 /* Arrow */
 .select::after {
   content: "\25BC";
